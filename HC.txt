@@ -1,0 +1,170 @@
+/*-------------------------------------------------------------------*/
+/* This is a list of datasets and resource profiles having an 'HC:'  */
+/* attribute in the GSD331 manual                                    */
+/*                                                                   */
+/* Together with the currently effective LPA/APF/Linklist datasets   */
+/* that will be found out by the program: OSRHC, all the datasets &  */
+/* resource files listed here, will be processed by the OSRHC to     */
+/* generate a complete list of all 'HC'ed dataset and resource names */
+/*                                                                   */
+/* Further process will then generates the following 2 lists:        */
+/* List 1: The 'HC'ed datasets/resource profiles, each with the      */
+/*         information about what user IDs (with what access         */
+/*         authorities) are defined                                  */
+/* List 2: The user IDs, with the information about what 'HC'ed      */
+/*         datasets/resource profiles each is allowed to             */
+/*                                                                   */
+/*                                                2008 Mar 31 AJ     */
+/* Updated to add the least authority to check                       */
+/*                                                2008 Apr 08 AJ     */
+/*-------------------------------------------------------------------*/
+
+/* LPA/APF/Linklist datasets will be detected by OSRHC */
+/* LPA/APF/Linklist datasets with UPDATE authority or higher */
+
+/* Spool datasets */
+SYS1.HASPACE                             READ
+/* Dump datasets  */
+SYS1.DUMP00                              UPDATE
+SYS1.DUMP01                              UPDATE
+SYS1.DUMP02                              UPDATE
+FFST.V120ESA.EPWDUMP                     UPDATE
+TWS.V930.EQQDUMP                         UPDATE
+TWS.V930.EQQDUMPS                        UPDATE
+TWS.V930.SYSDUMP                         UPDATE
+TWS.V930.SYSDUMPB                        UPDATE
+TWS.V930.SYSDUMPE                        UPDATE
+TWS.V930.SYSDUMPS                        UPDATE
+SYS1.TAISOA1.DMP*                        UPDATE
+/* RACF databases */
+SYS1.RACF                                READ
+SYS1.RACFSEC                             READ
+/* sys1.parmlib */
+SYS1.PARMLIB                             UPDATE
+SYS1.IBM.PARMLIB                         UPDATE
+SYS1.TWN.PARMLIB                         UPDATE
+CPAC.PARMLIB                             UPDATE
+/* JES parameter libraries */
+SYS1.TWN.PARMLIB                         UPDATE
+/* HFS datasets of HFS */
+OMVS.ETC                                 UPDATE
+OMVS.NETVHFS                             UPDATE
+OMVS.ROOT                                UPDATE
+OMVS.SAPSROOT                            UPDATE
+OMVS.SCFZHFS2                            UPDATE
+OMVS.SEQQROOT                            UPDATE
+OMVS.SIBMROOT                            UPDATE
+OMVS.SIGYROOT                            UPDATE
+OMVS.SINGZFS                             UPDATE
+OMVS.SIZUUSRD                            UPDATE
+OMVS.VAR                                 UPDATE
+FNT.OMVS.ZFS                             UPDATE
+OMVS.S229R1.ETC                          UPDATE
+OMVS.S229R1.NETVHFS                      UPDATE
+OMVS.S229R1.ROOT                         UPDATE
+OMVS.S229R1.SAPSROOT                     UPDATE
+OMVS.S229R1.SCFZHFS2                     UPDATE
+OMVS.S229R1.SEQQROOT                     UPDATE
+OMVS.S229R1.SIBMROOT                     UPDATE
+OMVS.S229R1.SIGYROOT                     UPDATE
+OMVS.S229R1.SINGZFS                      UPDATE
+OMVS.S229R1.SIZUUSRD                     UPDATE
+OMVS.S229R1.VAR                          UPDATE
+FNT.S229R1.OMVS.ZFS                      UPDATE
+OMVS.S221R1.ETC                          UPDATE
+OMVS.S221R1.NETVHFS                      UPDATE
+OMVS.S221R1.ROOT                         UPDATE
+OMVS.S221R1.SAPSROOT                     UPDATE
+OMVS.S221R1.SCFZHFS2                     UPDATE
+OMVS.S221R1.SEQQROOT                     UPDATE
+OMVS.S221R1.SIBMROOT                     UPDATE
+OMVS.S221R1.SIGYROOT                     UPDATE
+OMVS.S221R1.SINGZFS                      UPDATE
+OMVS.S221R1.SIZUUSRD                     UPDATE
+OMVS.S221R1.VAR                          UPDATE
+FNT.S221R1.OMVS.ZFS                      UPDATE
+OMVS.S222R1.ETC                          UPDATE
+OMVS.S222R1.NETVHFS                      UPDATE
+OMVS.S222R1.ROOT                         UPDATE
+OMVS.S222R1.SAPSROOT                     UPDATE
+OMVS.S222R1.SCFZHFS2                     UPDATE
+OMVS.S222R1.SEQQROOT                     UPDATE
+OMVS.S222R1.SIBMROOT                     UPDATE
+OMVS.S222R1.SIGYROOT                     UPDATE
+OMVS.S222R1.SINGZFS                      UPDATE
+OMVS.S222R1.SIZUUSRD                     UPDATE
+OMVS.S222R1.VAR                          UPDATE
+FNT.S222R1.OMVS.ZFS                      UPDATE
+OMVS.JAVA64V8                            UPDATE
+OMVS.SOA.USER                            UPDATE
+/* HSM parmlib */
+/* Network erformance Monitor ddname FNMPARM */
+
+/* NetView FTP Checkpoint datasets (DD DVGCR) */
+NFTP.NFTP230.CHECKPNT.FILE               READ
+
+/* NetView dataset with passwords for automated operations */
+/* N/A for ITCS104 */
+NV.V62.INGAO.PASSWORD                    READ
+NV.V62.SOAAO.PASSWORD                    READ
+NV.V62.SOANF.PASSWORD                    READ
+
+/* NetView Distribution Monitor dataset for userids and passwords */
+/* In order to cover Netview Health Check */
+NETVIEW.DSIPARM                          UPDATE
+NETVIEW.SAQNPARM                         UPDATE
+NV.V62.USER.QR1NF.DSIPARM                UPDATE
+NV.V62.USER.SOANF.DSIPARM                UPDATE
+ING.SINGNPRM                             UPDATE
+SA.V41.IBMTCO.DSIPARM                    UPDATE
+SA.V41.TAIWAN.DSIPARM1                   UPDATE
+
+/* RODM installation datasets */
+
+/* tcpip pw.src datasets */
+
+/* tcpip trace datasets,N/A for ITCS104 */
+
+/* general resource classes and profiles */
+DASDVOL  **                              UPDATE
+FACILITY STGADMIN.**                     READ
+FACILITY STGADMIN.ADR.**                 READ
+SDSF     ISFAUTH.DEST.**                 READ
+SDSF     ISFOPER.SYSTEM                  READ
+TSOAUTH  ACCT                            READ
+TSOAUTH  CONSOLE                         READ
+TSOAUTH  OPER                            READ
+TSOAUTH  PARMLIB                         READ
+TSOAUTH  TESTAUTH                        READ
+FACILITY CSVAPF.**                       READ
+FACILITY IRR.PASSWORD.RESET              READ
+FACILITY IRR.PWRESET.OWNER.*             READ
+FACILITY IRR.PWRESET.TREE.*              READ
+OPERCMDS JES2*.*                         UPDATE
+OPERCMDS MVS.SETPROG                     UPDATE
+OPERCMDS MVS.SET.PROG                    UPDATE
+OPERCMDS MVS.VARY.TCPIP.OBEYFILE         READ
+OPERCMDS MVS.MCSOPER.**                  READ
+/* unix system services */
+FACILITY BPX.DAEMON                      READ
+FACILITY BPX.FILEATTR.APF                READ
+FACILITY BPX.FILEATTR.PROGCTL            READ
+FACILITY BPX.SERVER                      READ
+FACILITY BPX.SUPERUSER                   READ
+FACILITY BPX.WLMSERVER                   READ
+FIELD    USER.OMVS.UID                   UPDATE
+UNIXPRIV SUPERUSER.FILESYS               UPDATE
+UNIXPRIV SUPERUSER.FILESYS.CHANGEPERMS   READ
+UNIXPRIV SUPERUSER.FILESYS.CHOWN         READ
+UNIXPRIV SUPERUSER.FILESYS.MOUNT         READ
+/* cics dump datasets */
+
+/* cics category 1 transactions */
+
+/* remaining cics category 2 transactions */
+
+/* omegamon initial3 */
+
+/* omegamon individual commands */
+
+

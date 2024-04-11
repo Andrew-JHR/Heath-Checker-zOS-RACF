@@ -1,0 +1,133 @@
+/*-------------------------------------------------------------------*/
+/* For CICS transaction control,                                     */
+/* add the categories 1 and 2 transaction ids as the 2nd arguments   */
+/* alongside the 1st argument which is the group class name          */
+/*                                                                   */
+/* If there are similar controls for IMS or DB2, do the same thing   */
+/*                                                2008 APR 28 AJ     */
+/* For those system ids supposed to be excluded,e.g. testing systems */
+/* , put '-systemid' as the 3rd argument.                            */
+/* If there are more than 1 system to be excluded,                   */
+/* put them as                                                       */
+/* GCICSTRN ADYN -TCICS1  -TCICS2  -TCICS3  -TCICS4  -TCICS5         */
+/* There can be at most 5 systems to be excluded                     */
+/*                                                2008 APR 29 AJ     */
+/*-------------------------------------------------------------------*/
+
+/* CICS categories 1 & 2 transactions */
+/* They are not necessary to be in alphabetical order */
+
+GCICSTRN ADYN
+GCICSTRN CADP
+GCICSTRN CAFB
+GCICSTRN CAFF
+GCICSTRN CATA
+GCICSTRN CATD
+GCICSTRN CBAM
+GCICSTRN CCRL
+GCICSTRN CDBC
+GCICSTRN CDBD
+GCICSTRN CDBF
+GCICSTRN CDBI
+GCICSTRN CDBM
+GCICSTRN CDBO
+GCICSTRN CDBQ
+GCICSTRN CDBT
+GCICSTRN CDFS
+GCICSTRN CDTS
+GCICSTRN CEBR
+GCICSTRN CECI
+GCICSTRN CEDA
+GCICSTRN CEDB
+GCICSTRN CEDC
+GCICSTRN CEDF
+GCICSTRN CEDX
+GCICSTRN CEHP
+GCICSTRN CEHS
+GCICSTRN CEMT
+GCICSTRN CEOT
+GCICSTRN CESC
+GCICSTRN CESD
+GCICSTRN CEST
+GCICSTRN CETR
+GCICSTRN CEX2
+GCICSTRN CFCL
+GCICSTRN CFOR
+GCICSTRN CFQR
+GCICSTRN CFQS
+GCICSTRN CFTL
+GCICSTRN CFTS
+GCICSTRN CGRP
+GCICSTRN CIDP
+GCICSTRN CIND
+GCICSTRN CIOD
+GCICSTRN CIOF
+GCICSTRN CIOR
+GCICSTRN CIRP
+GCICSTRN CIRR
+GCICSTRN CITS
+GCICSTRN CJMJ
+GCICSTRN CJTR
+GCICSTRN CMSG
+GCICSTRN CMTS
+GCICSTRN CORE
+GCICSTRN COVR
+GCICSTRN CPIA
+GCICSTRN CPIH
+GCICSTRN CPIL
+GCICSTRN CPIQ
+GCICSTRN CPIR
+GCICSTRN CPLT
+GCICSTRN CPMI
+GCICSTRN CREA
+GCICSTRN CREC
+GCICSTRN CRMD
+GCICSTRN CRMF
+GCICSTRN CRPA
+GCICSTRN CRPC
+GCICSTRN CRPM
+GCICSTRN CRSQ
+GCICSTRN CRSY
+GCICSTRN CRTE
+GCICSTRN CRTP
+GCICSTRN CSFE
+GCICSTRN CSFR
+GCICSTRN CSFU
+GCICSTRN CSHA
+GCICSTRN CSHQ
+GCICSTRN CSHR
+GCICSTRN CSKP
+GCICSTRN CSMI
+GCICSTRN CSM1
+GCICSTRN CSM2
+GCICSTRN CSM3
+GCICSTRN CSM5
+GCICSTRN CSNC
+GCICSTRN CSNE
+GCICSTRN CSOL
+GCICSTRN CSPQ
+GCICSTRN CSQC
+GCICSTRN CSSY
+GCICSTRN CSTE
+GCICSTRN CSTP
+GCICSTRN CSZI
+GCICSTRN CTIN
+GCICSTRN CTSD
+GCICSTRN CVMI
+GCICSTRN CWBA
+GCICSTRN CWBG
+GCICSTRN CWTO
+GCICSTRN CWXN
+GCICSTRN CWXU
+GCICSTRN CXCU
+GCICSTRN CXRE
+GCICSTRN DSNC
+GCICSTRN EZAC
+GCICSTRN FILE
+GCICSTRN XLOG
+GCICSTRN XPED
+GCICSTRN XPOF
+GCICSTRN XPRT
+GCICSTRN XPSP
+GCICSTRN XSIT
+
