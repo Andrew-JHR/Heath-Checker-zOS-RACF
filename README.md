@@ -1,4 +1,4 @@
-#Health Check Tool for z/OS using RACF
+# Health Check Tool for z/OS using RACF
 
 This is a Health Check tool to complement the TRT Testing Tool for z/OS 
 accounts who use RACF as their security server.
